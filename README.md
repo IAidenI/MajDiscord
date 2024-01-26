@@ -18,11 +18,13 @@ Pour le lancer en arrière plan
 <pre><code>nohup /chemin/vers/maj_discord &</code></pre>
 
 Pour qu'il se lance au démmarage sous gnome :
-Installer tweaks <pre><code>apt install gnome-tweaks -y</code></pre>
-Il faut ajouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) :
+
+- Installer tweaks <pre><code>apt install gnome-tweaks -y</code></pre>
+
+- A jouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) :
 <pre><code>echo 'export PATH=/chemin/vers/le/dossier/de/maj_discord:$PATH' >> ~/.bashrc;source ~/.bashrc</code></pre>
 
-Crée un fichier contenant cela et en modifiant les chmin d'accès (logo disponible dans src :
+- Crée un fichier contenant cela et en modifiant les chmin d'accès (logo disponible dans src :
 <pre><code>cat > ~/.local/share/applications/maj_discord.desktop
 #!/bin/python3
 [Desktop Entry]
@@ -34,6 +36,7 @@ Icon=/chemin/vers/discord.png
 Terminal=false
 Categories=Utility</code></pre>
 
+- Ajouter l'application au démmarage
 <p align="center">
   <img src="./src/image/1.png"/>
 </p>
