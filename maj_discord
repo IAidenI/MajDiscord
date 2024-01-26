@@ -12,9 +12,9 @@ do
         notify-send "Maj Discord" "Mise à jour en cours..."
         sudo dpkg -i "$directory"/"$new_file" > /dev/null 2>&1
         if [ $? -eq 0 ]; then
-            notify-send --urgency=critical -i /home/aiden/Images/status/icone-d-information-vert.png "Maj Discord" "Mise à jour réussie"
+            notify-send --urgency=critical -i ./src/image/icone-d-information-vert.png "Maj Discord" "Mise à jour réussie"
         else
-            notify-send --urgency=critical -i /home/aiden/Images/status/icone-d-information-rouge.png "Maj Discord" "Mise à jour échouée"
+            notify-send --urgency=critical -i ./src/image/icone-d-information-rouge.png "Maj Discord" "Mise à jour échouée"
         fi
         rm "$directory/$new_file" > /dev/null 2>&1
         sleep 1
