@@ -25,6 +25,18 @@ Pour qu'il se lance au démmarage sous gnome :
 Il faut ajouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) :
 <pre><code>echo 'export PATH=/chemin/vers/le/dossier/de/maj_discord:$PATH' >> ~/.bashrc;source ~/.bashrc</code></pre>
 
+Crée un fichier contenant cela et en modifiant les chmin d'accès :
+<pre><code>cat > ~/.local/share/applications/maj_discord.desktop
+#!/bin/python3
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=MajDiscord
+Exec=/chemin/vers/maj_discord
+Icon=/chemin/vers/discord.png
+Terminal=false
+Categories=Utility</code></pre>
+
 <p align="center">
   <img src="./src/image/1.png"/>
 </p>
