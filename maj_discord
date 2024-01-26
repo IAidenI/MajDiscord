@@ -4,11 +4,11 @@ directory="/home/aiden/Téléchargements" # Chemin d'accès du dossier où se tr
 
 notify-send "Maj Discord" "PID du script : kill $$" # Notifications indicant le PID du script
 
-inotifywait -m -e create --format "%f" "$directory" | while read new_file # Si un fichier se crée dans le répertoire $directory cela déclange la suite du programme 
+inotifywait -m -e create --format "%f" "$directory" | while read new_file # Si un fichier se crée dans le répertoire $directory cela déclange la suite du programme
 do
     if [[ "$new_file" =~ ^discord.*\.deb$ ]]; then # Vérifie si c'est un ficher du type discord*.deb
         inotifywait -q -e close_write "$directory/$new_file" # Atend que le ficher soit ne soit plus entraint d'être écris (téléchargement fini)
-        
+
         notify-send "Maj Discord" "Mise à jour en cours..." # Notification du début de la mise à jour
         sudo dpkg -i "$directory"/"$new_file" > /dev/null 2>&1 # Install la mise à jour
 
