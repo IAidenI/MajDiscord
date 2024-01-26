@@ -4,7 +4,7 @@ Permet de mettre à jour Discord de manière semi-automatique. Il suffit de tél
 ## Prérequis
 <pre><code>apt install inotify-tools -y</code></pre>
 
-Modifier le fichier `/etc/sudoers` et ajouter :
+Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 <pre><code>username ALL=(ALL) NOPASSWD: /usr/bin/dpkg -i /path/app</code></pre>
 
 *Note : C'est pour avoir les notifications, pour ne pas avoir à ajouter un utilisateur en sudoer, il suffi de changer*
