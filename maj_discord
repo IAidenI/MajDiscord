@@ -11,6 +11,7 @@ do
         
         notify-send "Maj Discord" "Mise à jour en cours..." # Notification du début de la mise à jour
         sudo dpkg -i "$directory"/"$new_file" > /dev/null 2>&1 # Install la mise à jour
+
         if [ $? -eq 0 ]; then # Si la mise à jour à marché, notification Mise à jour réussi, sinon Mise à jour échoué
             notify-send --urgency=critical -i ./src/image/icone-d-information-vert.png "Maj Discord" "Mise à jour réussie"
         else
