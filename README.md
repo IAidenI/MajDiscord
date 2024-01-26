@@ -16,7 +16,7 @@ Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 ## Installation
 <pre><code>git clone https://github.com/IAidenI/MajDiscord;chmod +x MajDiscord/maj_discord</code></pre>
 
-**Penser à changer dans le chemin d'accès à checker + changer les deux images avec leur bon chemin d'accès (les images se trouvent dans src)**
+**Penser à changer dans le chemin d'accès à du téléchargement des fichiers**
 
 Pour qu'il se lance au démmarage sous gnome :
 Il faut ajouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) :
