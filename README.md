@@ -14,7 +14,7 @@ Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 *Mais les notifications n'apparaîtrons pas.*
 
 ## Installation
-<pre><code>git clone https://github.com/IAidenI/MajDiscord;chmod +x maj_discord</code></pre>
+<pre><code>git clone https://github.com/IAidenI/MajDiscord;chmod +x MajDiscord/maj_discord</code></pre>
 
 **Penser à changer dans le chemin d'accès à checker + changer les deux images avec leur bon chemin d'accès (les images se trouvent dans src)**
 
