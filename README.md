@@ -14,7 +14,7 @@ Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 
 **Penser à changer dans le chemin d'accès à du téléchargement des fichiers**
 
-Optionell :
+Optionelle :
 A jouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) : <pre><code>echo 'export PATH=/chemin/vers/le/dossier/de/maj_discord:$PATH' >> ~/.bashrc;source ~/.bashrc</code></pre>
 
 Pour le lancer en arrière plan
