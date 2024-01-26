@@ -31,3 +31,7 @@ Il faut ajouter le script à la variable d'environement PATH, pour cela éditer 
 <p align="center">
   <img src="./src/image/3.png"/>
 </p>
+
+## Désactiver le script
+<pre><code>ps -aux | grep "maj_discord"
+kill PID_maj_discord</code></pre>
