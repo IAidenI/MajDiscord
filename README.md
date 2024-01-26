@@ -18,6 +18,9 @@ Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 
 **Penser à changer dans le chemin d'accès à du téléchargement des fichiers**
 
+pour le lancer en arrière plan
+<pre><code>nohup /chemin/vers/maj_discord &</code></pre>
+
 Pour qu'il se lance au démmarage sous gnome :
 Il faut ajouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) :
 <pre><code>cat >> export PATH=/chemin/vers/le/dossier/qui/contient/maj_discord:$PATH;source ~/.bashrc</code></pre>
