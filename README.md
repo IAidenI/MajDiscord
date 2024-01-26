@@ -16,7 +16,7 @@ Modifier le fichier `/etc/sudoers` et ajouter :
 ## Installation
 <pre><code>git clone https://github.com/IAidenI/MajDiscord</code></pre>
 
-**Penser à changer dans le chemin d'accès à checker + changer les deux images avec leur bon chemin d'accès (les premières lignes)**
+**Penser à changer dans le chemin d'accès à checker + changer les deux images avec leur bon chemin d'accès (les images se trouvent dans src)**
 
 Pour qu'il se lance au démmarage sous gnome
 <p align="center">
