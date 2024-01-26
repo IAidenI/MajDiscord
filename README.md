@@ -14,6 +14,9 @@ Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 
 **Penser à changer dans le chemin d'accès à du téléchargement des fichiers**
 
+Optionell :
+A jouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) : <pre><code>echo 'export PATH=/chemin/vers/le/dossier/de/maj_discord:$PATH' >> ~/.bashrc;source ~/.bashrc</code></pre>
+
 Pour le lancer en arrière plan
 <pre><code>nohup /chemin/vers/maj_discord &</code></pre>
 
@@ -25,8 +28,6 @@ kill PID_maj_discord</code></pre>
 Pour qu'il se lance au démmarage sous gnome :
 
 - Installer tweaks <pre><code>apt install gnome-tweaks -y</code></pre>
-
-- A jouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) : <pre><code>echo 'export PATH=/chemin/vers/le/dossier/de/maj_discord:$PATH' >> ~/.bashrc;source ~/.bashrc</code></pre>
 
 - Crée un fichier contenant cela et en modifiant les chmin d'accès (logo disponible dans src : <pre><code>cat > ~/.local/share/applications/maj_discord.desktop
 #!/bin/python3
