@@ -7,11 +7,11 @@ Permet de mettre à jour Discord de manière semi-automatique. Il suffit de tél
 Modifier le fichier `/etc/sudoers` et ajouter :
 <pre><code>username ALL=(ALL) NOPASSWD: /usr/bin/dpkg -i /path/app</code></pre>
 
-*Note : C'est pour avoir les notifications, pour ne pas avoir à ajouter un utilisateur en sudoer, il suffi de changer
+*Note : C'est pour avoir les notifications, pour ne pas avoir à ajouter un utilisateur en sudoer, il suffi de changer*
 <pre><code>sudo dpkg -i "$directory"/"$new_file" > /dev/null 2>&1</code></pre>
-Par
+*Par*
 <pre><code>dpkg -i "$directory"/"$new_file" > /dev/null 2>&1</code></pre>
-Mais les notifications n'apparaîtrons pas.*
+*Mais les notifications n'apparaîtrons pas.*
 
 ## Installation
 <pre><code>git clone https://github.com/IAidenI/MajDiscord</code></pre>
