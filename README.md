@@ -17,6 +17,11 @@ Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 Pour le lancer en arrière plan
 <pre><code>nohup /chemin/vers/maj_discord &</code></pre>
 
+## Désactiver le script
+<pre><code>ps -aux | grep "maj_discord"
+kill PID_maj_discord</code></pre>
+
+## Lancement au démmarage
 Pour qu'il se lance au démmarage sous gnome :
 
 - Installer tweaks <pre><code>apt install gnome-tweaks -y</code></pre>
@@ -38,7 +43,3 @@ Categories=Utility</code></pre>
 <p align="center">
   <img src="./src/image/1.png"/>
 </p>
-
-## Désactiver le script
-<pre><code>ps -aux | grep "maj_discord"
-kill PID_maj_discord</code></pre>
