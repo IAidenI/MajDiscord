@@ -1,0 +1,22 @@
+#!/bin/bash
+
+directory="/home/aiden/Téléchargements"
+
+notify-send "Maj Discord" "PID du script : kill $$"
+
+inotifywait -m -e create --format "%f" "$directory" | while read new_file
+do
+    if [[ "$new_file" =~ ^discord.*\.deb$ ]]; then
+        inotifywait -q -e close_write "$directory/$new_file"
+        
+        notify-send "Maj Discord" "Mise à jour en cours..."
+        sudo dpkg -i "$directory"/"$new_file" > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+            notify-send --urgency=critical -i /home/aiden/Images/status/icone-d-information-vert.png "Maj Discord" "Mise à jour réussie"
+        else
+            notify-send --urgency=critical -i /home/aiden/Images/status/icone-d-information-rouge.png "Maj Discord" "Mise à jour échouée"
+        fi
+        rm "$directory/$new_file" > /dev/null 2>&1
+        sleep 1
+    fi
+done
