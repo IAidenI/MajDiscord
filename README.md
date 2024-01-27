@@ -12,7 +12,7 @@ Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 ## Installation
 <pre><code>git clone https://github.com/IAidenI/MajDiscord;chmod +x MajDiscord/maj_discord</code></pre>
 
-**Penser à changer dans le chemin d'accès à du téléchargement des fichiers**
+**Penser à changer le chemin d'accès du dossier où se télécharge les fichiers et les images des status (elles se trouvent dans src)**
 
 Optionelle :
 A jouter le script à la variable d'environement PATH, pour cela éditer le fichier .bashrc (pour les environement bash, .zshrc pour zsh par exemple, pour savoir echo $SHELL) : <pre><code>echo 'export PATH=/chemin/vers/le/DOSSIER/de/maj_discord:$PATH' >> ~/.bashrc;source ~/.bashrc</code></pre>
