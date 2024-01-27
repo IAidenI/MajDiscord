@@ -2,7 +2,7 @@
 Permet de mettre à jour Discord de manière semi-automatique. Il suffit de télécharger la nouvelle version, il s'occupe du reste.
 
 ## Prérequis
-<pre><code>apt install inotify-tools -y</code></pre>
+<pre><code>apt install inotify-tools -y && apt install libnotify-bin -y</code></pre>
 
 Modifier au besoin le fichier `/etc/sudoers` et ajouter :
 <pre><code>username ALL=(ALL) NOPASSWD: /usr/bin/dpkg -i /path/to/download/discord*.deb</code></pre>
