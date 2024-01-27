@@ -1,6 +1,8 @@
 #!/bin/bash
 
 directory="/home/aiden/Téléchargements" # Chemin d'accès du dossier où se trouve les téléchargements
+status_vert="/home/aiden/Documents/MajDiscord/src/image/icone-d-information-vert.png"
+status_rouge="/home/aiden/Documents/MajDiscord/src/image/icone-d-information-rouge.png"
 
 notify-send "Maj Discord" "PID du script : $$" # Notifications indicant le PID du script
 
@@ -13,9 +15,9 @@ do
         sudo dpkg -i "$directory"/"$new_file" > /dev/null 2>&1 # Install la mise à jour
 
         if [ $? -eq 0 ]; then # Si la mise à jour à marché, notification Mise à jour réussi, sinon Mise à jour échoué
-            notify-send --urgency=critical -i ./src/image/icone-d-information-vert.png "Maj Discord" "Mise à jour réussie"
+            notify-send --urgency=critical -i $satus_vert "Maj Discord" "Mise à jour réussie"
         else
-            notify-send --urgency=critical -i ./src/image/icone-d-information-rouge.png "Maj Discord" "Mise à jour échouée"
+            notify-send --urgency=critical -i $status_rouge "Maj Discord" "Mise à jour échouée"
         fi
         rm "$directory/$new_file" > /dev/null 2>&1 # Suppression du fichier discord*.deb
         sleep 1
