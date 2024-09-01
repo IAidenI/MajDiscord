@@ -1,10 +1,10 @@
 #!/bin/bash
 
 directory="/home/aiden/Téléchargements" # Chemin d'accès du dossier où se trouve les téléchargements
-status_vert="/home/aiden/Documents/Tools/My_Tool/bin/srcDiscord/image/icone-d-information-vert.png"
-status_rouge="/home/aiden/Documents/Tools/My_Tool/bin/srcDiscord/image/icone-d-information-rouge.png"
+status_vert="/home/aiden/Documents/Tools/My_Tool/MajDiscord/src/image/icone-d-information-vert.png"
+status_rouge="/home/aiden/Documents/Tools/My_Tool/MajDiscord/src/image/icone-d-information-rouge.png"
 
-notify-send --urgency=critical -i $status_vert "Maj Discord" "PID du script : $$" # Notifications indicant le PID du script
+#notify-send "Maj Discord" "PID du script : $$" # Notifications indicant le PID du script
 
 inotifywait -m -e create --format "%f" "$directory" | while read new_file # Si un fichier se crée dans le répertoire $directory cela déclange la suite du programme
 do
